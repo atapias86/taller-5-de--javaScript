@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="Js/funciones_main.js"></script>
+    <script src="Js/funcion_mostar_ocultar.js"></script>
+    <link rel="stylesheet" href="Css/Style.css">
+    <title>Python a JavaScript</title>
+</head>
+
+<body>
+    <h1>segundo taller de python a JavaScript</h1>
+    <div class="div_principal">
+        <div class="btn_ejercicios">
+            <section>
+                <button id="btn_01">Ejercicio 01</button>
+                <button id="btn_02">Ejercicio 02</button>
+                <button id="btn_03">Ejercicio 03</button>
+                <button id="btn_04">Ejercicio 04</button>
+                <button id="btn_05">Ejercicio 05</button>
+                <button id="btn_06">Ejercicio 06</button>
+                <button id="btn_07">Ejercicio 07</button>
+            </section>
+        </div>
+        <div class="panel_ejercicios" id="panel_ejercicios">
+            <section>
+                <div id="ejercicio_01" style="display:block;">
+                    <h4>Realiza un programa en Python, que pida números mientras no se ingrese uno negativo. Al final,
+                        se debe mostrar la suma de los números ingresados.</h4>
+                    <button class="btn_inicio" id="btn_incio_ejer01" value="Iniciar">Iniciar</button>
+                    <textarea class="textarea" id="txt_area" readonly
+                        placeholder="Aqui aparece el resultado"></textarea>
+                    <dialog class="favDialog" id="favDialog_ejer01">
+                        <form id="dialogo_01">
+                            <input type="number" name="num_1" required placeholder="Ingrese un numero">
+                            <div>
+                                <input class="sub_confir" type="submit" value="Confirmar">
+                            </div>
+                        </form>
+                    </dialog>
+                </div>
+
+                <div id="ejercicio_02" style="display:none;">
+                    <h4>Crear un programa que permita al usuario ingresar los montos de las compras de un cliente (se
+                        desconoce la cantidad de datos que cargará, la cual puede cambiar en cada ejecución), cortando
+                        el ingreso de datos cuando el usuario ingrese el monto 0. Si ingresa un monto negativo, no se
+                        debe procesar y se debe pedir que ingrese un nuevo monto. Al finalizar, informar el total a
+                        pagar teniendo que cuenta que, si las ventas superan el total de $10000, se le debe aplicar un
+                        10% de descuento.</h4>
+                    <button class="btn_inicio" id="btn_incio_ejer02" value="Iniciar">Iniciar</button>
+                    <textarea class="textarea" id="txt_area_ejer02" readonly
+                        placeholder="Aqui aparece el resultado"></textarea>
+                    <dialog class="favDialog" id="favDialog_ejer02">
+                        <form id="dialogo_02">
+                            <input type="number" name="dato_prec" required placeholder="Ingrese el precio">
+                            <div>
+                                <input class="sub_confir" type="submit" value="Confirmar">
+                            </div>
+                        </form>
+                    </dialog>
+                </div>
+                <div id="ejercicio_03" style="display:none;">
+                    <h4>Una pizzería, vende sus pizzas en tres tamaños:
+                        Pequeña (10 pulga. De diámetro); mediana (12 pulg. De diámetro); y grandes (16 pulg. De
+                        diámetro); Una pizza puede ser sencilla (con sólo salsa y carne), o con ingredientes extras,
+                        tales como pepinillos, champiñones o cebollas. Los propietarios desean desarrollar un programa
+                        que calcule el precio de venta de una pizza, dándole el tamaño y el número de ingredientes
+                        extras. El precio de venta será 1.5 veces el costo total, que viene determinado por el área de
+                        la pizza, más el número de ingredientes.<br>
+                        • En particular el costo total se calcula sumando:<br>
+                        • Un costo fijo de preparación<br>
+                        • Un costo base variable que es proporcional al tamaño de la pizza
+                    </h4>
+                </div>
+                <!--<div id="ejercicio_04" style="display:none;">
+                    <h4>Cálculo de áreas - Elige una figura geométrica:" Triángulo y Círculo</h4>
+                    <select id="selec_opc">
+                        <option value="Selecionar">Selecionar</option>
+                        <option value="Calcular el area del Triángulo">Calcular el area del Triángulo</option>
+                        <option id="opc3_4" value="Calcular el area del Círculo">Calcular el area del Círculo</option>
+                    </select>
+                    <h3 id="h3" style="color:white;"></h3>
+                    <form id="form_04_1" style="display: none;">
+                        <input id="altura" type="number" required placeholder="Ingrese valor de la altura">
+                        <input id="base" type="number" required placeholder="Ingrese valor de la base">
+                        <textarea id="text_resultado_ejer04_1" readonly
+                            placeholder="Aqui aparece el resultado"></textarea>
+                        <input class="submit_01" type="submit" value="Calcular">
+                    </form>
+                    <form id="form_04_2" style="display: none;">
+                        <input id="radio" type="number" required placeholder="Ingrese el valor del radio">
+                        <textarea id="text_resultado_ejer04_2" readonly
+                            placeholder="Aqui aparece el resultado"></textarea>
+                        <input class="submit_01" type="submit" value="Calcular">
+                    </form>
+                </div>
+                <div id="ejercicio_05" style="display:none;">
+                    <form id="form_05">
+                        <h4>Escriba un algoritmo que calcule el área de un rectángulo siempre y cuando los lados sean
+                            positivos</h4>
+                        <input id="lado_1" type="number" required placeholder="Ingrese el valor lado 1">
+                        <input id="lado_2" type="number" required placeholder="Ingrese el valor lado 2">
+                        <textarea id="text_resultado_ejer05" readonly
+                            placeholder="Aqui aparece el resultado"></textarea>
+                        <input class="submit_01" type="submit" value="Calcular">
+                    </form>
+                </div>
+                <div id="ejercicio_06" style="display:none;">
+                    <form id="form_06">
+                        <h4>Temperatura y presión</h4>
+                        <input id="temp" type="number" required placeholder="Ingrese el valor de la temperatura">
+                        <input id="pres" type="number" required placeholder="Ingrese el valor la presión">
+                        <textarea id="text_resultado_ejer06" readonly
+                            placeholder="Aqui aparece el resultado"></textarea>
+                        <input class="submit_01" type="submit" value="Calcular">
+                    </form>
+                </div>
+                <div id="ejercicio_07" style="display:none;">
+                    <form id="form_07">
+                        <h4>Calcular todos los pagos hechos de un restaurante y que si el consumo ingresado excede los
+                            $130.000 el descuento será del 15%</h4>
+                        <input id="total" type="number" required placeholder="Ingrese el total a pagar">
+                        <textarea id="text_resultado_ejer07" readonly
+                            placeholder="Aqui aparece el resultado"></textarea>
+                        <input class="submit_01" type="submit" value="Calcular">
+                    </form>
+                </div>                
+            </section>-->
+        </div>
+    </div>
+
+</body>
+
+</html>
