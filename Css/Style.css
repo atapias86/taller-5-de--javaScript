@@ -30,7 +30,6 @@ h1 {
     width: 45%;
     border: 1px solid red;
     margin-right: 10%;
-    padding-left: 50px;
 }
 
 .div_principal .btn_ejercicios button {
@@ -39,18 +38,19 @@ h1 {
     font-size: 0.7em;
     font-weight: bold;
     border-radius: 15px;
-    margin: 20px;
+    margin: auto;
+    margin: 10px;
     background-color: rgb(218, 216, 216);
     box-shadow: 5px 5px 10px rgb(218, 216, 216);
     cursor: pointer;
     overflow: hidden;
     justify-content: space-between;
-    transition: all 1s;
+    transition: all 0.5s;
 }
 
 .div_principal .btn_ejercicios button:hover {
-    transition: all 1s;
-    transform: rotate(360deg);
+    transition: all 0.5s;
+    transform: translate(0, -10px);
 }
 
 .div_principal .panel_ejercicios {
@@ -95,6 +95,7 @@ select {
     font-size: .8em;
     cursor: not-allowed;
 }
+
 textarea {
     width: 100%;
     height: 100px;
@@ -106,17 +107,8 @@ textarea {
     margin: auto;
     margin-top: 10px;
 }
-.div_principal .panel_ejercicios form .submit_01 {
-    width: 25%;
-    padding: 0;
-    font-size: .8em;
-    cursor: pointer;
-}
-.div_principal .panel_ejercicios form .submit_01:hover{
-    background-color: aquamarine;
-}
 
-.favDialog{
+.favDialog {
     max-width: 32%;
     margin: auto;
     padding: 10px;
@@ -125,35 +117,43 @@ textarea {
     background-color: rgb(70, 71, 71);
 }
 
-.favDialog form div .sub_confir{
+.favDialog form div .sub_confir {
     padding: 0;
     cursor: pointer;
     border: none;
 }
-.favDialog form div .sub_confir:hover{
+
+.favDialog form div .sub_confir:hover {
     background-color: aquamarine;
 }
 
-.tabla{
+.tabla {
     width: 100%;
     border: 1px solid white;
     margin: auto;
 }
-.tabla th{
+
+.tabla th {
     color: red;
 }
-.tabla, th ,td{
-        border: 1px solid white;
-        color: white;
+
+.tabla,
+th,
+td {
+    border: 1px solid white;
+    color: white;
 }
-.btn_inicio{
+
+.btn_inicio {
     width: 90px;
     height: 40px;
     cursor: pointer;
 }
-div{
+
+div {
     text-align: center;
 }
+
 dialog::backdrop {
     position: fixed;
     top: 0px;
@@ -161,4 +161,121 @@ dialog::backdrop {
     bottom: 0px;
     left: 0px;
     background: rgba(0, 0, 0, 0.829);
+}
+
+label {
+    color: #fff;
+    margin: 0;
+}
+
+#checkbox {
+    width: 20px;
+    margin: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    transform: translateY(9px);
+}
+
+#sub_confir {
+    width: 6em;
+    height: 40px;
+    cursor: pointer;
+}
+
+h3 {
+    color: #fff;
+}
+
+.swal-modal {
+    background-color: rgb(70, 71, 71);
+    border: 1px solid red;
+}
+
+.swal-overlay {
+    background-color: rgb(0 0 0 / 93%);
+}
+
+.swal-title:not(:last-child) {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.swal-text {
+    color: #fff;
+}
+
+.swal-button {
+    background-color: rgb(0, 255, 255);
+    color: #000;
+    transition: all 0.5s;
+}
+.swal-button:hover{
+    transform: translate(0,-5px);
+    color: #fff;
+}
+
+@media (max-width:800px) {
+    h1 {
+        font-size: 0.5em;
+    }
+
+    .div_principal .btn_ejercicios {
+        width: 30%;
+        border: 1px solid red;
+        margin-right: 5%;
+        padding-left: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .div_principal .btn_ejercicios button {
+        width: 8em;
+        height: 30px;
+        font-size: 10px;
+        border-radius: 15px;
+        margin: 20px;
+        background-color: rgb(218, 216, 216);
+        box-shadow: none;
+        margin: auto;
+        margin-left: 0;
+    }
+
+    .div_principal .btn_ejercicios button:hover {
+        transition: all 0.5s;
+        transform: translate(0, 0);
+    }
+
+    .div_principal .panel_ejercicios {
+        width: 65%;
+        padding: 20px;
+        border: 1px solid red;
+        overflow: hidden;
+        text-align: right;
+    }
+
+    h4 {
+        font-size: 12px;
+    }
+
+    .favDialog {
+        max-width: 90%;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    label {
+        display: block;
+        font-size: 14px;
+    }
+
+    #checkbox {
+        width: 15px;
+        margin: 0;
+        margin-left: 10px;
+        margin-right: 10px;
+        transform: translateY(10px);
+    }
 }

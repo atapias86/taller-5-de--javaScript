@@ -6,6 +6,7 @@ addEventListener("DOMContentLoaded", (e) => {
     let formdialogo_ejer_01 = document.querySelector("#dialogo_01");
     let calcular_ejer02 = document.querySelector("#btn_incio_ejer02");
     let formdialogo_ejer_02 = document.querySelector("#dialogo_02");
+    let ejercicio_03 = document.querySelector("#form_ejer3");
 
     let sum = 0;
 
@@ -59,13 +60,60 @@ addEventListener("DOMContentLoaded", (e) => {
             if (sum > 10000) {
                 formdialogo_ejer_02.reset();
                 favDialog_ejer02.close();
-                let des = (sum*10)/100;
-                let total = sum-des;
-                document.querySelector("#txt_area_ejer02").value = "Sub Total............ " + sum 
-                + "\nDescuento (10%)...... " + des
-                + "\nTotal................ " + total;
+                let des = (sum * 10) / 100;
+                let total = sum - des;
+                document.querySelector("#txt_area_ejer02").value = "Sub Total............ " + sum
+                    + "\nDescuento (10%)...... " + des
+                    + "\nTotal................ " + total;
                 sum = 0;
             }
         }
+    });
+    ejercicio_03.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let checkbox = document.querySelectorAll("input[type='checkbox']");
+        let checkboxData = [];
+        checkbox.forEach(res => (res.checked) ? checkboxData.push(res.value) : null);
+        let selec = document.querySelector("#select_03").value;
+        switch (selec) {
+            case "Pizza de 10 pulgadas":
+                let precioP10Pul = 15000;
+                checkboxData.forEach(ingre => {
+                    ingre == "Pepinillos" ? precioP10Pul += 1500 : null;
+                    ingre == "Champiñones" ? precioP10Pul += 1500 : null;
+                    ingre == "Cebollas" ? precioP10Pul += 1500 : null;
+                });
+                document.querySelector("#txt_area_ejer03").value = "Sub Total............ 15000"
+                    + "\nTotal................ " + precioP10Pul;
+                break
+
+            case "Pizza 12 pulgadas":
+                let precioP12Pul = 25000;
+                checkboxData.forEach(ingre => {
+                    ingre == "Pepinillos" ? precioP12Pul += 1500 : null;
+                    ingre == "Champiñones" ? precioP12Pul += 1500 : null;
+                    ingre == "Cebollas" ? precioP12Pul += 1500 : null;
+                });
+                document.querySelector("#txt_area_ejer03").value = "Sub Total............ 25000"
+                    + "\nTotal................ " + precioP12Pul;
+                break
+
+            case "Pizza 16 pulgadas":
+                let precioP16Pul = 35000;
+                checkboxData.forEach(ingre => {
+                    ingre == "Pepinillos" ? precioP16Pul += 1500 : null;
+                    ingre == "Champiñones" ? precioP16Pul += 1500 : null;
+                    ingre == "Cebollas" ? precioP16Pul += 1500 : null;
+                });
+                document.querySelector("#txt_area_ejer03").value = "Sub Total............ 35000"
+                    + "\nTotal................ " + precioP16Pul;
+                break
+
+            case "Selecion":
+                swal("Error", "Debes seleccionar una tamaño de pizza", "error");
+                document.querySelector("#txt_area_ejer03").value = "";
+                break;
+        }
+        document.querySelector("#form_ejer3").reset();
     });
 });
