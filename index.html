@@ -75,7 +75,8 @@
                         • Un costo fijo de preparación<br>
                         • Un costo base variable que es proporcional al tamaño de la pizza
                     </h4>
-                    <textarea class="textarea" id="txt_area_ejer03" readonly placeholder="Aqui aparece el resultado"></textarea>
+                    <textarea class="textarea" id="txt_area_ejer03" readonly
+                        placeholder="Aqui aparece el resultado"></textarea>
                     <form id="form_ejer3">
                         <select id="select_03">
                             <option value="Selecion">Seleccion</option>
@@ -92,29 +93,18 @@
                         </div>
                     </form>
                 </div>
-                <!--<div id="ejercicio_04" style="display:none;">
-                    <h4>Cálculo de áreas - Elige una figura geométrica:" Triángulo y Círculo</h4>
-                    <select id="selec_opc">
-                        <option value="Selecionar">Selecionar</option>
-                        <option value="Calcular el area del Triángulo">Calcular el area del Triángulo</option>
-                        <option id="opc3_4" value="Calcular el area del Círculo">Calcular el area del Círculo</option>
-                    </select>
-                    <h3 id="h3" style="color:white;"></h3>
-                    <form id="form_04_1" style="display: none;">
-                        <input id="altura" type="number" required placeholder="Ingrese valor de la altura">
-                        <input id="base" type="number" required placeholder="Ingrese valor de la base">
-                        <textarea id="text_resultado_ejer04_1" readonly
+                <div id="ejercicio_04" style="display:none;">
+                    <h4>Desarrolle un programa que invierta un número entero N dado por el usuario.</h4>
+                    <form id="form_ejer4">
+                        <input id="numero" type="number" name="numreo_rebes" required placeholder="Ingrese un numero">
+                        <textarea id="text_resultado_ejer04" readonly
                             placeholder="Aqui aparece el resultado"></textarea>
-                        <input class="submit_01" type="submit" value="Calcular">
-                    </form>
-                    <form id="form_04_2" style="display: none;">
-                        <input id="radio" type="number" required placeholder="Ingrese el valor del radio">
-                        <textarea id="text_resultado_ejer04_2" readonly
-                            placeholder="Aqui aparece el resultado"></textarea>
-                        <input class="submit_01" type="submit" value="Calcular">
+                        <div>
+                            <input id="sub_confir" type="submit" value="Confirmar">
+                        </div>
                     </form>
                 </div>
-                <div id="ejercicio_05" style="display:none;">
+                <!--<div id="ejercicio_05" style="display:none;">
                     <form id="form_05">
                         <h4>Escriba un algoritmo que calcule el área de un rectángulo siempre y cuando los lados sean
                             positivos</h4>
@@ -150,4 +140,5 @@
     </div>
 </body>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </html>

@@ -7,7 +7,7 @@ addEventListener("DOMContentLoaded", (e) => {
     let calcular_ejer02 = document.querySelector("#btn_incio_ejer02");
     let formdialogo_ejer_02 = document.querySelector("#dialogo_02");
     let ejercicio_03 = document.querySelector("#form_ejer3");
-
+    let ejercicio_04 = document.querySelector("#form_ejer4");
     let sum = 0;
 
     calcular_ejer01.addEventListener("click", (e) => {
@@ -116,4 +116,22 @@ addEventListener("DOMContentLoaded", (e) => {
         }
         document.querySelector("#form_ejer3").reset();
     });
+
+    ejercicio_04.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let data = Object.fromEntries(new FormData(e.target));
+        let numero = Number(data.numreo_rebes);
+        console.log(numero);
+        const invertirNumero = numero => {
+            let invertido = 0;
+            while (numero != 0) {
+                invertido = 10 * invertido + numero % 10
+                numero = (Math.floor(numero / 10))
+            }
+            return invertido
+        };
+        const numeroInvertido = invertirNumero(numero);
+        ejercicio_04.reset();
+        document.querySelector("#text_resultado_ejer04").value = "El numrero " + numero + " al Invertido es igual a: " + numeroInvertido;
+    })
 });

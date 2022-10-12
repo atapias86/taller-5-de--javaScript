@@ -210,9 +210,14 @@ h3 {
     color: #000;
     transition: all 0.5s;
 }
-.swal-button:hover{
-    transform: translate(0,-5px);
+
+.swal-button:hover {
+    transform: translate(0, -5px);
     color: #fff;
+}
+
+.swal-icon--error {
+    border-color: #fff;
 }
 
 @media (max-width:800px) {
