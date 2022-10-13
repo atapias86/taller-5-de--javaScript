@@ -104,18 +104,52 @@
                         </div>
                     </form>
                 </div>
-                <!--<div id="ejercicio_05" style="display:none;">
+                <div id="ejercicio_05" style="display:none;">
+                    <h4>En un club se registran de uno en uno los siguientes datos de sus socios: Documento de socio,
+                        Apellido y nombre, Edad y Tipo de deporte que practica (1 tenis, 2 rugby, 3 voley, 4 hockey, 5
+                        futbol). Diseñar el código de un algoritmo que permita mostrar por pantalla cuantos socios
+                        practican cada deporte y el promedio de edad de los jugadores.</h4>
                     <form id="form_05">
-                        <h4>Escriba un algoritmo que calcule el área de un rectángulo siempre y cuando los lados sean
-                            positivos</h4>
-                        <input id="lado_1" type="number" required placeholder="Ingrese el valor lado 1">
-                        <input id="lado_2" type="number" required placeholder="Ingrese el valor lado 2">
-                        <textarea id="text_resultado_ejer05" readonly
-                            placeholder="Aqui aparece el resultado"></textarea>
-                        <input class="submit_01" type="submit" value="Calcular">
+                        <input name="txtId" type="number" required placeholder="Documento">
+                        <input name="txtNom" type="text" required placeholder="Nombre">
+                        <input name="txtApp" type="text" required placeholder="Apellidos">
+                        <input name="txtEdad" type="number" required placeholder="edad">
+                        <select id="select_05">
+                            <option value="Seleccion">Seleccion</option>
+                            <option value="Tenis">Tenis</option>
+                            <option value="Rugby">Rugby</option>
+                            <option value="Voley">Voley</option>
+                            <option value="Hockey">Hockey</option>
+                            <option value="Futbol">Futbol</option>
+                        </select>
+                        <div>
+                            <input id="sub_confir" type="submit" value="Agregar">
+                            <input id="sub_confir" class="dtn_ver_05" type="button" value="Ver tabla">
+                        </div>
                     </form>
+                    <dialog class="favDialog" id="favDialog_ejer05">
+                        <table class="tabla" id="tabla_club">
+                            <thead>
+                                <tr>
+                                    <th>COD</th>
+                                    <th>IDENTIFICACION</th>
+                                    <th>NOMBRE</th>
+                                    <th>APELLIDOS</th>
+                                    <th>EDAD</td>
+                                    <th>DEPORTE</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dataTable_club"></tbody>
+                        </table>
+                        <form id="from_cerrar_05">
+                            <div>
+                                <input id="sub_confir" type="submit" value="Cerrar">
+                                <input id="sub_confir" class="dtn_limpiar_05" type="button" value="Limpiar">
+                            </div>
+                        </form>
+                    </dialog>
                 </div>
-                <div id="ejercicio_06" style="display:none;">
+                <!--<div id="ejercicio_06" style="display:none;">
                     <form id="form_06">
                         <h4>Temperatura y presión</h4>
                         <input id="temp" type="number" required placeholder="Ingrese el valor de la temperatura">

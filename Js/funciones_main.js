@@ -1,6 +1,7 @@
 addEventListener("DOMContentLoaded", (e) => {
     const favDialog_ejer01 = document.querySelector('#favDialog_ejer01');
     const favDialog_ejer02 = document.querySelector('#favDialog_ejer02');
+    let favDialog_ejer05 = document.querySelector("#favDialog_ejer05");
 
     let calcular_ejer01 = document.querySelector("#btn_incio_ejer01");
     let formdialogo_ejer_01 = document.querySelector("#dialogo_01");
@@ -8,6 +9,10 @@ addEventListener("DOMContentLoaded", (e) => {
     let formdialogo_ejer_02 = document.querySelector("#dialogo_02");
     let ejercicio_03 = document.querySelector("#form_ejer3");
     let ejercicio_04 = document.querySelector("#form_ejer4");
+    let ejercicio_05 = document.querySelector("#form_05");
+    let btn_ver_ejer05 = document.querySelector(".dtn_ver_05");
+    let from_cerrar_05 = document.querySelector("#from_cerrar_05");
+    let limpiar_tabla_05 = document.querySelector(".dtn_limpiar_05");
     let sum = 0;
 
     calcular_ejer01.addEventListener("click", (e) => {
@@ -133,5 +138,40 @@ addEventListener("DOMContentLoaded", (e) => {
         const numeroInvertido = invertirNumero(numero);
         ejercicio_04.reset();
         document.querySelector("#text_resultado_ejer04").value = "El numrero " + numero + " al Invertido es igual a: " + numeroInvertido;
-    })
+    });
+    let cont = 1;
+    ejercicio_05.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let selec = document.querySelector("#select_05").value;
+        let data = Object.fromEntries(new FormData(e.target));
+        let id = Number(data.txtId);
+        let nombre = data.txtNom;
+        let apell = data.txtApp;
+        let edad = Number(data.txtEdad);
+        let plantillas = `
+            <tr>
+                <td>${cont}</td>
+                <td>${id}</td>
+                <td>${nombre}</td>
+                <td>${apell}</td>
+                <td>${edad}</td>
+                <td>${selec}</td>
+            </tr>`;
+        document.querySelector("#dataTable_club").insertAdjacentHTML("beforeend", plantillas);
+        ejercicio_05.reset();
+        cont ++;
+    });
+    btn_ver_ejer05.addEventListener("click", (e) => {
+        e.preventDefault();
+        favDialog_ejer05.showModal();
+    });
+    from_cerrar_05.addEventListener("submit", (e) => {
+        e.preventDefault();
+        favDialog_ejer05.close();
+    });
+    limpiar_tabla_05.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelector("#dataTable_club").innerHTML = "";
+        cont = 1;
+    });
 });
