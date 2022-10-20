@@ -149,27 +149,103 @@
                         </form>
                     </dialog>
                 </div>
-                <!--<div id="ejercicio_06" style="display:none;">
+                <div id="ejercicio_06" style="display:none;">
+                    <h4>
+                        Realice un Algoritmo que permita calcular y dar como salida el promedio de bateo (PB) de cada
+                        jugador perteneciente a un equipo de 10 jugadores, tomando en cuenta que se tienen los
+                        siguientes <br><br>
+                        datos:<br>
+                        • Nombre del Jugador<br>
+                        • Veces al Bate (VB)<br>
+                        • Hit Conectados (HIT)<br>
+                        • Extrabases Conectadas (EXT)<br>
+                        • Cantidad de Sacrificios (S)<br>
+                        • Cantidad de Bases por Bolas Recibidas (BB)<br><br>
+                        NOTA:<br>
+                        PB = BBC / VLB * 1000 donde:<br>
+                        BBC = HIT + EXT<br>
+                        VLB = VB – S – BB<br>
+                    </h4>
                     <form id="form_06">
-                        <h4>Temperatura y presión</h4>
-                        <input id="temp" type="number" required placeholder="Ingrese el valor de la temperatura">
-                        <input id="pres" type="number" required placeholder="Ingrese el valor la presión">
-                        <textarea id="text_resultado_ejer06" readonly
-                            placeholder="Aqui aparece el resultado"></textarea>
-                        <input class="submit_01" type="submit" value="Calcular">
+                        <input name="txtNombre" type="text" required placeholder="Nombre del jugador">
+                        <input name="txtVB" type="number" required placeholder="Veces al Bate (VB) ">
+                        <input name="txtHIT" type="number" required placeholder="Hit Conectados (HIT)">
+                        <input name="txtEXT" type="number" required placeholder="Extrabases Conectadas (EXT)">
+                        <input name="txtS" type="number" required placeholder="Cantidad de Sacrificios (S)">
+                        <input name="txtBB" type="number" required
+                            placeholder="Cantidad de Bases por Bolas Recibidas (BB)">
+                        <div>
+                            <input id="sub_confir" class="submit_06" type="submit" value="Agregar" disabled>
+                            <input id="sub_confir" class="btn_ver_06" type="button" value="Ver tabla">
+                        </div>
                     </form>
+                    <dialog class="favDialog" id="favDialog_ejer06">
+                        <table class="tabla" id="tabla_bateo">
+                            <thead>
+                                <tr>
+                                    <th>Cod</th>
+                                    <th>Nombre</th>
+                                    <th>Promedio de bateo</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dataTable_bateo"></tbody>
+                        </table>
+                        <form id="from_cerrar_06">
+                            <div>
+                                <input id="sub_confir" type="submit" value="Cerrar">
+                                <input id="sub_confir" class="dtn_limpiar_05 btn_05" type="button" value="Limpiar">
+                            </div>
+                        </form>
+                    </dialog>
                 </div>
                 <div id="ejercicio_07" style="display:none;">
+                    <h4>
+                        Cinco miembros de un club contra la obesidad desean saber cuánto han bajado o subido de peso
+                        desde la última vez que se reunieron. Para esto se debe realizar un ritual de pesaje en donde
+                        cada uno se pesa en diez básculas distintas para así tener el promedio más exacto de su peso. Si
+                        existe diferencia positiva entre este promedio de peso y el peso de la última vez que se
+                        reunieron, significa que subieron de peso. Pero si la diferencia es negativa, significa que
+                        bajaron. Lo que el problema requiere es que por cada persona se imprima un letrero que diga:
+                        “SUBIO” o “BAJO” y la cantidad de kilos que subió o bajo de peso
+                    </h4>
                     <form id="form_07">
-                        <h4>Calcular todos los pagos hechos de un restaurante y que si el consumo ingresado excede los
-                            $130.000 el descuento será del 15%</h4>
-                        <input id="total" type="number" required placeholder="Ingrese el total a pagar">
-                        <textarea id="text_resultado_ejer07" readonly
-                            placeholder="Aqui aparece el resultado"></textarea>
-                        <input class="submit_01" type="submit" value="Calcular">
+                        <input name="txtNombre" type="text" required placeholder="Nombre del miembro">
+                        <input name="proAnt" type="number" required placeholder="Promedio de peso anterior">
+                        <div>
+                            <input id="sub_confir" class="submit_07" type="submit" value="Siguiente" disabled>
+                            <input id="sub_confir" class="btn_ver_07" type="button" value="Ver tabla">
+                        </div>
                     </form>
-                </div>                
-            </section>-->
+                    <dialog class="favDialog" id="favDialog_peso">
+                        <form id="formPeso_07" data-peso="10">
+                            <input name="txtpeso" type="number" required placeholder="Ingrese el peso marcado por la bascula">                           
+                            <div>
+                                <input id="sub_confir" class="submit_07" type="submit" value="Agregar">
+                            </div>
+                        </form>
+                    </dialog>
+                    <dialog class="favDialog" id="favDialog_ejer07">
+                        <table class="tabla" id="tabla_peso">
+                            <thead>
+                                <tr>
+                                    <th>Cod</th>
+                                    <th>Nombre</th>
+                                    <th>Promedio anterior</th>
+                                    <th>Promedio actual</th>
+                                    <th>Resultado</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dataTable_peso"></tbody>
+                        </table>
+                        <form id="from_cerrar_07">
+                            <div>
+                                <input id="sub_confir" type="submit" value="Cerrar">
+                                <input id="sub_confir" class="btn_07" type="button" value="Limpiar">
+                            </div>
+                        </form>
+                    </dialog>
+                </div>
+            </section>
         </div>
     </div>
 </body>

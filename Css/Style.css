@@ -135,8 +135,13 @@ textarea {
 
 .tabla th {
     color: red;
+    font-size: 14px;
+    padding: 5px;
 }
-
+.tabla td{
+    font-size: 14px;
+    padding: 5px;
+}
 .tabla,
 th,
 td {
@@ -282,5 +287,15 @@ h3 {
         margin-left: 10px;
         margin-right: 10px;
         transform: translateY(10px);
+    }
+    .tabla th {
+        font-size: 12px;
+        padding: 3px;
+        text-transform: lowercase;
+    }
+    .tabla td{
+        font-size: 12px;
+        padding: 3px;
+        text-transform: lowercase;
     }
 }
